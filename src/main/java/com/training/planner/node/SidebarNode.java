@@ -2,6 +2,7 @@ package com.training.planner.node;
 
 import com.training.planner.controller.Controller;
 import com.training.planner.view.View;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
 
@@ -17,7 +18,7 @@ public class SidebarNode extends StackPane implements Loadable {
 
     public SidebarNode(Controller controller) {
         this.controller = controller;
-        load(thid);
+        load(this);
     }
 
     @Override
@@ -33,5 +34,10 @@ public class SidebarNode extends StackPane implements Loadable {
             case "homeButton" -> homeButton.setid(String.format(id, title));
         }
 
+    }
+
+    @FXML
+    private void onHome(ActionEvent event) {
+        controller.switchTo(View.HOME);
     }
 }

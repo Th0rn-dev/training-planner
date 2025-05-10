@@ -15,7 +15,7 @@ public class ViewLoader {
 
     private final FxWeaver fxWeaver;
 
-    public Parent load(View view) {
+    public Parent load(View view, Object input) {
         try {
             Controller controller = (Controller) fxWeaver.getBean(view.getController());
             controller.setView(view);
