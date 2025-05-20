@@ -32,10 +32,10 @@ public class Controller implements Switchable{
     private Pane content;
 
     protected void initialize() {
-        if (view.getHasSidebar()) {
+        if (true) {
             layout.setLeft(new SidebarNode(this));
         }
-        if (view.getHasHeader()) {
+        if (true) {
             content.getChildren().add(0, new HeaderNode(this));
         }
         configure();

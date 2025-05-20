@@ -19,6 +19,7 @@ public class ViewLoader {
         try {
             Controller controller = (Controller) fxWeaver.getBean(view.getController());
             controller.setView(view);
+            controller.setInput(input);
             return fxWeaver.loadView(view.getController());
         } catch (Exception e) {
             e.printStackTrace();

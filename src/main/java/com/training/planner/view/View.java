@@ -1,6 +1,7 @@
 package com.training.planner.view;
 
 
+import com.training.planner.controller.Controller;
 import com.training.planner.controller.impl.HomeController;
 import lombok.Getter;
 
@@ -36,11 +37,12 @@ public enum View {
         return view.getTitle().toLowerCase();
     }
 
-    public boolean getHasSidebar() {
+    public Class<?> getController() {
+        return controller;
+    }
+
+    public boolean isHasSidebar() {
         return hasSidebar;
     }
 
-    public boolean getHasHeader() {
-        return hasHeader;
-    }
 }
