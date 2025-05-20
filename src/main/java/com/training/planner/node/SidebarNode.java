@@ -31,7 +31,7 @@ public class SidebarNode extends StackPane implements Loadable {
         String id = "%s-button-clicked";
         String title = View.getTitle(controller.getView());
         switch (title.concat("Button")) {
-            case "homeButton" -> System.out.println("Another Button");
+            case "homeButton" -> System.out.println("Home Button");
             case "anotherButton" -> System.out.println("Another Button");
         }
 

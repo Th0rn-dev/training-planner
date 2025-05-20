@@ -20,6 +20,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class Controller implements Switchable{
 
+    @Getter(AccessLevel.NONE)
     private final ViewSwitcher viewSwitcher;
     private View view;
     private Object input;

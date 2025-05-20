@@ -37,10 +37,6 @@ public enum View {
         return view.getTitle().toLowerCase();
     }
 
-    public Class<?> getController() {
-        return controller;
-    }
-
     public boolean isHasSidebar() {
         return hasSidebar;
     }
